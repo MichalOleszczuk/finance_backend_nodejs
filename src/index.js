@@ -26,6 +26,7 @@ app.use(middlewares.allowOrigins);
 
 // parse application/json
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // connect to db
 initializeDb( db => {
